@@ -151,6 +151,7 @@ class EventScreen extends StatelessWidget {
                         fontSize: 20),
                   ),
                   SizedBox(
+                    // height: 12,
                     height: screenHeight * 0.01,
                   ),
                   Column(children: List.generate(6, (tiket) => const Ticket())),

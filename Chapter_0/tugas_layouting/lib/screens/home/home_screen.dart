@@ -82,15 +82,12 @@ class HomeScreen extends StatelessWidget {
         SizedBox(
           height: screenHeight * 0.035,
         ),
-        Padding(
-          padding: const EdgeInsets.only(left: 20),
-          child: SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-                children: categories
-                    .map((category) => Categories(category: category))
-                    .toList()),
-          ),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+              children: categories
+                  .map((category) => Categories(category: category))
+                  .toList()),
         ),
         SizedBox(
           height: screenHeight * 0.035,
@@ -103,23 +100,20 @@ class HomeScreen extends StatelessWidget {
         SizedBox(
           height: screenHeight * 0.01,
         ),
-        Padding(
-          padding: const EdgeInsets.only(left: 20),
-          child: SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-                children: List.generate(
-                    4,
-                    (index) => GestureDetector(
-                        onTap: () {
-                          showMaterialModalBottomSheet(
-                              context: context,
-                              enableDrag: false,
-                              builder: (BuildContext context) =>
-                                  const EventScreen());
-                        },
-                        child: const Events()))),
-          ),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+              children: List.generate(
+                  4,
+                  (index) => GestureDetector(
+                      onTap: () {
+                        showMaterialModalBottomSheet(
+                            context: context,
+                            enableDrag: false,
+                            builder: (BuildContext context) =>
+                                const EventScreen());
+                      },
+                      child: const Events()))),
         ),
       ],
     );

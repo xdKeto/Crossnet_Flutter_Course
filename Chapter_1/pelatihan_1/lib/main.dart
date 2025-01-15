@@ -15,54 +15,156 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: ListView(children: [
+          Padding(
+            padding: const EdgeInsets.all(32.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  'Budi bermain bola Budi bermain bola Budi bermain bola Budi bermain bola Budi bermain bola Budi bermain bola Budi bermain bola Budi bermain bola Budi bermain bola ',
+                  style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.amber,
+                      fontStyle: FontStyle.italic,
+                      decoration: TextDecoration.underline),
+                  textDirection: TextDirection.rtl,
+                  textAlign: TextAlign.center,
+                  maxLines: 3,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                const SizedBox(
+                  height: 32,
+                ),
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: 52,
+                      width: 52,
+                      color: Colors.blue,
+                    ),
+                    Container(
+                      height: 52,
+                      width: 52,
+                      color: Colors.red,
+                    ),
+                    Container(
+                      height: 52,
+                      width: 52,
+                      color: Colors.green,
+                    ),
+                    Container(
+                      height: 52,
+                      width: 52,
+                      color: Colors.pink,
+                    ),
+                    Container(
+                      height: 52,
+                      width: 52,
+                      color: Colors.amber,
+                    ),
+                    Container(
+                      height: 52,
+                      width: 52,
+                      color: Colors.purple,
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 32,
+                ),
+                Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Container(
+                      height: 300,
+                      width: 300,
+                      color: Colors.red,
+                    ),
+                    Container(
+                      height: 100,
+                      width: 100,
+                      color: Colors.blue,
+                    ),
+                    Container(
+                      height: 50,
+                      width: 50,
+                      color: Colors.green,
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 32,
+                ),
+                Wrap(
+                  alignment: WrapAlignment.center,
+                  verticalDirection: VerticalDirection.up,
+                  direction: Axis.vertical,
+                  runSpacing: 30,
+                  spacing: 20,
+                  children: [
+                    Container(
+                      height: 52,
+                      width: 52,
+                      color: Colors.blue,
+                    ),
+                    Container(
+                      height: 52,
+                      width: 52,
+                      color: Colors.red,
+                    ),
+                    Container(
+                      height: 52,
+                      width: 52,
+                      color: Colors.green,
+                    ),
+                    Container(
+                      height: 52,
+                      width: 52,
+                      color: Colors.pink,
+                    ),
+                    Container(
+                      height: 52,
+                      width: 52,
+                      color: Colors.amber,
+                    ),
+                    Container(
+                      height: 52,
+                      width: 52,
+                      color: Colors.purple,
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 32,
+                ),
+                Container(
+                  height: 300,
+                  width: 300,
+                  padding: const EdgeInsets.all(32),
+                  // color: Colors.purple,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.amber,
+                      border: Border.all(color: Colors.green, width: 5),
+                      boxShadow: const [
+                        BoxShadow(
+                            color: Colors.red, spreadRadius: 10, blurRadius: 5)
+                      ]),
+                  child: const Text(
+                    'ASDASDASDASD',
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ],
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+          ),
+        ]),
       ),
     );
   }
