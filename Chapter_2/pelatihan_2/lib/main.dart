@@ -75,32 +75,44 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.white,
         body: SingleChildScrollView(
           // controller: ScrollController(),
-          child: Container(
-            height: 200,
-            child: Row(
-              children: [
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.green,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Container(
+                height: 200,
+                child: Row(
+                  children: [
+                    Container(
+                      height: 100,
+                      width: 100,
+                      color: Colors.green,
+                    ),
+                    Expanded(
+                        flex: 2,
+                        child: Container(
+                          color: Colors.red,
+                        )),
+                    Expanded(
+                        flex: 1,
+                        child: Container(
+                          color: Colors.purple,
+                        )),
+                    Container(
+                      width: 100,
+                      height: 100,
+                      color: Colors.blue,
+                    ),
+                  ],
                 ),
-                Expanded(
-                    flex: 2,
-                    child: Container(
-                      color: Colors.red,
-                    )),
-                Expanded(
-                    flex: 1,
-                    child: Container(
-                      color: Colors.purple,
-                    )),
-                Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.blue,
+              ),
+              SizedBox(
+                height: 250,
+                width: 250,
+                child: Container(
+                  color: Colors.black,
                 ),
-              ],
-            ),
+              )
+            ],
           ),
         ));
   }
