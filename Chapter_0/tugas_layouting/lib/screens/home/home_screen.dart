@@ -82,12 +82,15 @@ class HomeScreen extends StatelessWidget {
         SizedBox(
           height: screenHeight * 0.035,
         ),
-        SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
-              children: categories
-                  .map((category) => Categories(category: category))
-                  .toList()),
+        Padding(
+          padding: const EdgeInsets.only(left: 20),
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+                children: categories
+                    .map((category) => Categories(category: category))
+                    .toList()),
+          ),
         ),
         SizedBox(
           height: screenHeight * 0.035,
@@ -100,21 +103,24 @@ class HomeScreen extends StatelessWidget {
         SizedBox(
           height: screenHeight * 0.01,
         ),
-        SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
-              children: List.generate(
-                  4,
-                  (index) => GestureDetector(
-                      onTap: () {
-                        showMaterialModalBottomSheet(
-                            context: context,
-                            enableDrag: false,
-                            builder: (BuildContext context) =>
-                                const EventScreen());
-                      },
-                      child: const Events()))),
-        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 20),
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+                children: List.generate(
+                    4,
+                    (index) => GestureDetector(
+                        onTap: () {
+                          showMaterialModalBottomSheet(
+                              context: context,
+                              enableDrag: false,
+                              builder: (BuildContext context) =>
+                                  const EventScreen());
+                        },
+                        child: const Events()))),
+          ),
+        )
       ],
     );
   }

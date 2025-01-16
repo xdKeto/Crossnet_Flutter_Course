@@ -8,30 +8,25 @@ class Categories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    return Padding(
-      padding: const EdgeInsets.only(right: 6.0),
-      child: Container(
-        margin: const EdgeInsets.only(
-          left: 20,
-        ),
-        padding: const EdgeInsets.all(8),
-        width: size.width * 0.28,
-        height: 75,
-        decoration: AppStyles.boxPutih,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Icon(category['icon']),
-            SizedBox(
-              height: size.height * 0.01,
-            ),
-            Text(
-              category['name'],
-              style: AppStyles.textFont.copyWith(
-                  fontWeight: FontWeight.w600, color: AppStyles.textColor),
-            )
-          ],
-        ),
+    return Container(
+      margin: const EdgeInsets.only(right: 16),
+      padding: const EdgeInsets.all(8),
+      width: size.width * 0.28,
+      height: 75,
+      decoration: AppStyles.boxPutih,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Icon(category['icon']),
+          SizedBox(
+            height: size.height * 0.01,
+          ),
+          Text(
+            category['name'],
+            style: AppStyles.textFont.copyWith(
+                fontWeight: FontWeight.w600, color: AppStyles.textColor),
+          )
+        ],
       ),
     );
   }
