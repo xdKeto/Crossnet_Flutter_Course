@@ -48,34 +48,34 @@ class _HtmlQuillEditorState extends State<HtmlQuillEditor> {
         Center(
           child: InkWell(
               onTap: () {
-                // saveHTML();
+                saveHTML();
                 NotificationService.showInstantNotification(
                     3, 'TESTING', 'TES TEST ES TES TESTES');
               },
               child: Text('HTML EDITOR',
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold))),
         ),
-        // QuillSimpleToolbar(
-        //   controller: Qcontroller,
-        //   configurations: const QuillSimpleToolbarConfigurations(),
-        // ),
-        // Expanded(
-        //   child: QuillEditor.basic(
-        //     controller: Qcontroller,
-        //     configurations: const QuillEditorConfigurations(),
-        //   ),
-        // ),
-        // Divider(
-        //   thickness: 2,
-        // ),
-        // Text('Ini Hasil HTML:'),
-        // Padding(
-        //   padding: EdgeInsets.only(bottom: 8),
-        // ),
-        // Padding(
-        //   padding: const EdgeInsets.all(8.0),
-        //   child: HtmlWidget(hasil),
-        // ),
+        QuillSimpleToolbar(
+          controller: Qcontroller,
+          configurations: const QuillSimpleToolbarConfigurations(),
+        ),
+        Expanded(
+          child: QuillEditor.basic(
+            controller: Qcontroller,
+            configurations: const QuillEditorConfigurations(),
+          ),
+        ),
+        Divider(
+          thickness: 2,
+        ),
+        Text('Ini Hasil HTML:'),
+        Padding(
+          padding: EdgeInsets.only(bottom: 8),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: HtmlWidget(hasil),
+        ),
       ],
     );
   }

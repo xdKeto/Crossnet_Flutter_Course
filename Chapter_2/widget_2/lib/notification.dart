@@ -10,9 +10,9 @@ class NotificationService {
 
   static Future<void> init() async {
     AndroidInitializationSettings androidInitializationSettings =
-        const AndroidInitializationSettings("@mipmap/ic_launcher");
+        AndroidInitializationSettings("@mipmap/ic_launcher");
     DarwinInitializationSettings darwinInitializationSettings =
-        const DarwinInitializationSettings();
+        DarwinInitializationSettings();
 
     InitializationSettings initializationSettings = InitializationSettings(
         iOS: darwinInitializationSettings,
@@ -31,7 +31,7 @@ class NotificationService {
 
   static Future<void> showInstantNotification(
       int id, String title, String body) async {
-    NotificationDetails platformChannelSpecifics = const NotificationDetails(
+    NotificationDetails platformChannelSpecifics = NotificationDetails(
         android: AndroidNotificationDetails('channel_id', 'channel_name',
             importance: Importance.high,
             priority: Priority.high,
