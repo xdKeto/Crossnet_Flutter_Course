@@ -23,9 +23,9 @@ class _PickimageState extends State<Pickimage> {
       file.absolute.path,
       quality: 94,
     );
-    print(file.lengthSync());
-    print(result!.length);
-    return result;
+    // print(file.lengthSync());
+    // print(result!.length);
+    return result!;
   }
 
   Future<Uint8List> testComporessList(Uint8List list) async {
@@ -33,8 +33,8 @@ class _PickimageState extends State<Pickimage> {
       list,
       quality: 96,
     );
-    print(list.length);
-    print(result.length);
+    // print(list.length);
+    // print(result.length);
     return result;
   }
 
@@ -55,7 +55,7 @@ class _PickimageState extends State<Pickimage> {
                     await picker.pickImage(source: ImageSource.gallery);
 
                 if (photo != null) {
-                  print('berhasil pick image');
+                  // print('berhasil pick image');
                   pickedImageByte = await photo.readAsBytes();
                   setState(() {
                     pickedIMG = File(photo.path);
@@ -77,7 +77,7 @@ class _PickimageState extends State<Pickimage> {
 
                 if (photo != null) {
                   pickedImageByte = await photo.readAsBytes();
-                  print('berhasil pick image');
+                  // print('berhasil pick image');
                   setState(() {
                     pickedIMG = File(photo.path);
                     testCompressFile(pickedIMG!);
