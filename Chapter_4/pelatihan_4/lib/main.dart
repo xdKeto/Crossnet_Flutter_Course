@@ -44,7 +44,7 @@ class _MyAppState extends State<MyApp> {
 
                     Pokemon.fetchData().then((value) {
                       setState(() {
-                        // print(value);
+                        print(value[0].name);
                       });
                     });
                   },
