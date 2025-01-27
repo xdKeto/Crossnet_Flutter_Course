@@ -72,7 +72,7 @@ class Berry {
     var response = await http.get(Uri.parse(url));
 
     var jsonOBJ = jsonDecode(response.body);
-    Berry berries = Berry.fromJson(jsonOBJ) ;
+    Berry berries = Berry.fromJson(jsonOBJ);
 
     return berries;
   }

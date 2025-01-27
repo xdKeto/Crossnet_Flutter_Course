@@ -22,6 +22,7 @@ class BuyButton extends StatelessWidget {
                   isDismissible: false,
                   enableDrag: false,
                   builder: (BuildContext context) => Container(
+
                         decoration: BoxDecoration(
                             color: AppStyles.whiteColor,
                             borderRadius: const BorderRadius.only(
