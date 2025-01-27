@@ -13,7 +13,7 @@ class AppBarr extends StatelessWidget implements PreferredSize {
       child: AppBar(
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: [ 
             Image(
               image: AssetImage('assets/images/pokeicon.png'),
               width: 30,

@@ -68,21 +68,16 @@ class Pokemon {
       types:
           (json['types'] as List).map((item) => Type.fromJson(item)).toList(),
     );
-  }
+    }
 
-  static Future<List<Pokemon>> fetchData(String name) async {
-    String url = 'https://pokeapi.co/api/v2/pokemon/$name';
+  static Future<Pokemon> fetchData(String url) async {
     var response = await http.get(Uri.parse(url));
 
     var obj = jsonDecode(response.body);
-    var data = obj['results'];
-    List<Pokemon> list = [];
+    Pokemon poke = Pokemon.fromJson(obj);
+    // print(poke.name);
 
-    for (var i = 0; i < data.length; i++) {
-      list.add(Pokemon.fromJson(data[i]));
-    }
-
-    return list;
+    return poke;
   }
 }
 

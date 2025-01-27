@@ -36,6 +36,6 @@ class OwnedPokemon {
       list.add(OwnedPokemon.fromJson(data[i]));
     }
 
-    return list;  
+    return list;
   }
 }
