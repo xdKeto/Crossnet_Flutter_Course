@@ -1,6 +1,5 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:tugas_pokedex/coba.dart';
 import 'package:tugas_pokedex/pic_json.dart';
 import 'package:tugas_pokedex/pokemon.dart';
 import 'package:tugas_pokedex/tab_barr.dart';

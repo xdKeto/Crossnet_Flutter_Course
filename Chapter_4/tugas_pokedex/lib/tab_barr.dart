@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:tugas_pokedex/about.dart';
+import 'package:tugas_pokedex/moves.dart';
 import 'package:tugas_pokedex/pokemon.dart';
+import 'package:tugas_pokedex/stats.dart';
 
 class TabBarr extends StatelessWidget {
   final List<Pokemon> list;
@@ -35,17 +38,11 @@ class TabBarr extends StatelessWidget {
             ],
           ),
         ),
-        body: const TabBarView(
+        body: TabBarView(
           children: <Widget>[
-            Center(
-              child: Text("It's cloudy here"),
-            ),
-            Center(
-              child: Text("It's rainy here"),
-            ),
-            Center(
-              child: Text("It's sunny here"),
-            ),
+            About(list: list, index: index),
+            Stats(list: list, index: index),
+            Moves(list: list, index: index),
           ],
         ),
       ),
