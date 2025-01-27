@@ -16,9 +16,6 @@ class Moves extends StatelessWidget {
             'Abilities: ',
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
-          SizedBox(
-            height: 6,
-          ),
           Row(
             children: List.generate(list[index].abilities.length, (iter) {
               return Text(
@@ -26,13 +23,16 @@ class Moves extends StatelessWidget {
               );
             }),
           ),
+          SizedBox(
+            height: 6,
+          ),
           Text(
             'Moves: ',
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
           Wrap(
-            spacing: 8.0, 
-            runSpacing: 8.0, 
+            spacing: 8.0,
+            runSpacing: 8.0,
             children: List.generate(list[index].moves.length, (iter) {
               return Text(
                 '| ${list[index].moves[iter].move.name}',
@@ -42,7 +42,6 @@ class Moves extends StatelessWidget {
           SizedBox(
             height: 6,
           ),
-          
         ],
       ),
     );
