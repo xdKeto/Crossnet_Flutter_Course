@@ -13,22 +13,6 @@ class Moves extends StatelessWidget {
       child: ListView(
         children: [
           Text(
-            'Moves: ',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-          ),
-          Wrap(
-            spacing: 8.0, // Space between items
-            runSpacing: 8.0, // Space between rows
-            children: List.generate(list[index].moves.length, (iter) {
-              return Text(
-                '| ${list[index].moves[iter].move.name}',
-              );
-            }),
-          ),
-          SizedBox(
-            height: 6,
-          ),
-          Text(
             'Abilities: ',
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
@@ -42,6 +26,23 @@ class Moves extends StatelessWidget {
               );
             }),
           ),
+          Text(
+            'Moves: ',
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+          Wrap(
+            spacing: 8.0, 
+            runSpacing: 8.0, 
+            children: List.generate(list[index].moves.length, (iter) {
+              return Text(
+                '| ${list[index].moves[iter].move.name}',
+              );
+            }),
+          ),
+          SizedBox(
+            height: 6,
+          ),
+          
         ],
       ),
     );
